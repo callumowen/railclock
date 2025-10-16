@@ -48,6 +48,23 @@ main {
   color: white;
 }
 
+a:any-link {
+  color: inherit;
+}
+
+main:has(+ footer) {
+  height: calc(100% - 2rem);
+}
+
+footer {
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  color: gray;
+}
+
 #clock {
   container-type: inline-size;
   aspect-ratio: 1 / 1;

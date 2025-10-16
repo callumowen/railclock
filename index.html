@@ -67,6 +67,14 @@
       </div>
     </main>
 
+    <footer>
+      <p>
+        <a href="https://github.com/davwheat/railclock/">Source code</a>
+        &nbsp;|&nbsp;
+        <a id="hide-footer" href="#" role="button">Hide</a>
+      </p>
+    </footer>
+
     <script>
       function seconds() {
         const now = new Date();
@@ -107,6 +115,11 @@
       }
 
       requestAnimationFrame(seconds);
+
+      document.getElementById("hide-footer").addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector("footer").remove();
+      });
     </script>
   </body>
 </html>
