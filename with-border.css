@@ -1,0 +1,16 @@
+body,
+html {
+  background: #111;
+}
+
+main {
+  padding: 2rem;
+}
+
+#clock {
+  border: 1.5cqi solid #5b5c5d;
+}
+
+.ring {
+  --size: 98cqi;
+}

@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Rail Alphabet 2";
+  src: url("fonts/ULDHCTNewRailAlphabet-Bold.woff2") format("woff2"),
+    url("fonts/ULDHCTNewRailAlphabet-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-family: "Rail Alphabet 2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #000;
+}
+
+body,
+html {
+  height: 100%;
+  overflow-x: hidden;
+  background: black;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+#clock {
+  container-type: inline-size;
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  max-height: 100%;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+#time {
+  display: flex;
+  font-size: 10rem;
+  line-height: 1;
+  font-weight: bold;
+  justify-content: center;
+}
+
+#time > span {
+  display: block;
+  text-align: center;
+  width: 1ch;
+  font-size: 23cqi;
+}
+
+#time > span#colon {
+  width: 0.5ch;
+  transform: translateY(-6%);
+}
+
+#time > span[data-value="1"] {
+  transform: translateX(-4%);
+}
+
+@property --rotation {
+  /* An initial value for our custom property */
+  initial-value: 0deg;
+  /* Whether it inherits from parent set values or not */
+  inherits: true;
+  /* The type. Yes, the type. You thought TypeScript was cool */
+  syntax: "<angle>";
+}
+
+.ring {
+  --size: 99.5cqi;
+  position: absolute;
+  top: calc((100cqi - var(--size)) / 2);
+  left: calc((100cqi - var(--size)) / 2);
+  width: var(--size);
+  height: var(--size);
+}
+
+#outer-ring {
+  transform: rotate(calc(-1 * var(--rotation)));
+}
+
+#inner-ring {
+  transform: rotate(var(--rotation));
+}
