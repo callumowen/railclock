@@ -52,7 +52,6 @@ main {
 #clock {
   container-type: inline-size;
   aspect-ratio: 1 / 1;
-  max-width: 100%;
   max-height: 100%;
   background: #000;
   color: white;
