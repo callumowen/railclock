@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Rail Alphabet 2";
-  src: url("fonts/ULDHCTNewRailAlphabet-Bold.woff2") format("woff2"),
-    url("fonts/ULDHCTNewRailAlphabet-Bold.woff") format("woff");
+  src: url("fonts/numerics.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
