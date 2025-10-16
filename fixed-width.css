@@ -1,0 +1,18 @@
+#time > span {
+  display: block;
+  width: 1ch;
+}
+
+#time > span#colon {
+  width: 0.5ch;
+}
+
+/* 1 in mins should be slightly left of center for visual alignment */
+#time > span:nth-child(n + 2)[data-value="1"] {
+  transform: translateX(-4%);
+}
+
+/* 1 in hours should be slightly right of center for visual alignment */
+#time > span:nth-child(-n + 2)[data-value="1"] {
+  transform: translateX(4%);
+}

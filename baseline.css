@@ -72,28 +72,16 @@ main {
   line-height: 1;
   font-weight: bold;
   justify-content: center;
+  font-size: 23cqi;
+  text-align: center;
 }
 
 #time > span {
-  display: block;
-  text-align: center;
-  width: 1ch;
-  font-size: 23cqi;
+  display: inline;
 }
 
 #time > span#colon {
-  width: 0.5ch;
   transform: translateY(-6%);
-}
-
-/* 1 in mins should be slightly left of center for visual alignment */
-#time > span:nth-child(n + 2)[data-value="1"] {
-  transform: translateX(-4%);
-}
-
-/* 1 in hours should be slightly right of center for visual alignment */
-#time > span:nth-child(-n + 2)[data-value="1"] {
-  transform: translateX(4%);
 }
 
 @property --rotation {

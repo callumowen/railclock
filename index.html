@@ -23,11 +23,18 @@
           '<link rel="stylesheet" href="with-border.css" />'
         );
       }
-      
+
       if (window.location.search.includes("no-colon")) {
         document.head.insertAdjacentHTML(
           "beforeend",
           '<link rel="stylesheet" href="no-colon.css" />'
+        );
+      }
+
+      if (window.location.search.includes("fixed-width")) {
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          '<link rel="stylesheet" href="fixed-width.css" />'
         );
       }
     </script>
@@ -69,6 +76,7 @@
             now.getMilliseconds() + now.getSeconds() * 1000
           } * 0.006deg - 180deg)`
         );
+
         const hours = String(now.getHours()).padStart(2, "0");
         const minutes = String(now.getMinutes()).padStart(2, "0");
         document.getElementById("h1").setAttribute("data-value", hours[0]);
@@ -79,6 +87,7 @@
         document.getElementById("h2").textContent = hours[1];
         document.getElementById("m1").textContent = minutes[0];
         document.getElementById("m2").textContent = minutes[1];
+
         requestAnimationFrame(seconds);
       }
 
