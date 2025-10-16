@@ -105,7 +105,7 @@ main {
 }
 
 .ring {
-  --size: 99cqi;
+  --size: 98.75cqi;
   position: absolute;
   top: calc((100cqi - var(--size)) / 2);
   left: calc((100cqi - var(--size)) / 2);
