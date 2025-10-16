@@ -14,6 +14,23 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="RailClock" />
     <link rel="manifest" href="site.webmanifest" />
+
+    <script>
+      // Special styling options
+      if (window.location.search.includes("with-border")) {
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          '<link rel="stylesheet" href="with-border.css" />'
+        );
+      }
+      
+      if (window.location.search.includes("no-colon")) {
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          '<link rel="stylesheet" href="no-colon.css" />'
+        );
+      }
+    </script>
   </head>
   <body>
     <main>
@@ -72,14 +89,6 @@
       setInterval(update, 1000);
       update();
       requestAnimationFrame(seconds);
-
-      // Special styling for bordered mode
-      if (window.location.search.includes("border")) {
-        document.head.insertAdjacentHTML(
-          "beforeend",
-          '<link rel="stylesheet" href="with-border.css" />'
-        );
-      }
     </script>
   </body>
 </html>

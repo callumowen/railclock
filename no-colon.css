@@ -1,0 +1,7 @@
+#time > span#colon {
+  display: none;
+}
+
+#time > span {
+  font-size: 25cqi;
+}
