@@ -103,9 +103,9 @@ main {
 }
 
 #outer-ring {
-  transform: rotate(calc(-1 * var(--rotation)));
+  transform: rotate(var(--rotation-outer));
 }
 
 #inner-ring {
-  transform: rotate(var(--rotation));
+  transform: rotate(var(--rotation-inner));
 }
