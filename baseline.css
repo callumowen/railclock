@@ -6,6 +6,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Siemens";
+  src: url("fonts/SiemensSans-Bold.woff2") format ("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
