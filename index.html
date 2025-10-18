@@ -31,19 +31,12 @@
           '<link rel="stylesheet" href="no-colon.css" />'
         );
       }
-      
-      if (window.location.search.includes("siemens")) {
-        document.head.insertAdjacentHTML(
-          "beforeend",
-          '<link rel="stylesheet" href="siemens.css" />'
-        );
-      }
 
-    //  if (window.location.search.includes("fixed-width")) {
-    //    document.head.insertAdjacentHTML(
-    //      "beforeend",
-    //      '<link rel="stylesheet" href="fixed-width.css" />'
-     //   );
+   //   if (window.location.search.includes("fixed-width")) {
+   //     document.head.insertAdjacentHTML(
+   //       "beforeend",
+   //       '<link rel="stylesheet" href="fixed-width.css" />'
+    //    );
    //   }
     </script>
   </head>
@@ -64,6 +57,7 @@
           src="./clock-inner.svg"
           role="presentation"
           alt=""
+          draggable="false"
         />
         <img
           class="ring"
@@ -71,10 +65,11 @@
           src="./clock-outer.svg"
           role="presentation"
           alt=""
+          draggable="false"
         />
       </div>
     </main>
-
+    
     <script>
       function seconds() {
         const now = new Date();
